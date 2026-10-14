@@ -17,3 +17,5 @@ export function CapabilityCard({ title, description, children }: Props) {
     </section>
   );
 }
+
+
