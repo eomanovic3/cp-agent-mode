@@ -7,4 +7,6 @@ const userSchema = new Schema({
   fitnessGoal: { type: String, required: true, trim: true },
 });
 
+userSchema.index({ email: 1 }, { unique: true });
+
 export const User = model('User', userSchema);

@@ -6,4 +6,6 @@ const teamSchema = new Schema({
   members: { type: [{ type: Schema.Types.ObjectId, ref: 'User' }], default: [] },
 });
 
+teamSchema.index({ name: 1 }, { unique: true });
+
 export const Team = model('Team', teamSchema);

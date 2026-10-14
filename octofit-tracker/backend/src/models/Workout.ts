@@ -7,4 +7,6 @@ const workoutSchema = new Schema({
   difficulty: { type: String, required: true, trim: true },
 });
 
+workoutSchema.index({ title: 1 }, { unique: true });
+
 export const Workout = model('Workout', workoutSchema);

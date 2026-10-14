@@ -9,4 +9,6 @@ const activitySchema = new Schema({
   occurredAt: { type: Date, required: true },
 });
 
+activitySchema.index({ user: 1, type: 1, occurredAt: 1 }, { unique: true });
+
 export const Activity = model('Activity', activitySchema);
